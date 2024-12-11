@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <link rel="stylesheet" href="settingStyles.css">
+</head>
+
+<body>
+  <div id="top-header">
+    <a href="index.html" id="home-link"><img src="images/home.png" id="homeImg" style="width: 3%; height: auto;" /></a>
+    <h1 id="accSetHead">Account Settings</h1>
+  </div>
+
+  <div id="help-container">
+    <a href="images/user guide.pdf" target="_blank" style="text-decoration: none; color: black;">
+      <div class="help-content">
+        <img id="helpImg" src="images/help.png">
+        <p id="helpText">Help</p>
+      </div>
+    </a>
+  </div>
+
+  <table class="container">
+    <tr>
+      <td>
+        <form id="changeUsernameForm">
+          <h2>Change Username</h2>
+
+          <label for="new-username">New Username:</label>
+          <input type="text" id="new-username" maxlength="16" name="new-username" required>
+
+          <br><br>
+
+          <label for="confirm-username">Confirm Username:</label>
+          <input type="text" id="confirm-username" maxlength="16" name="confirm-username" required>
+
+          <br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </td>
+      <td>
+        <form id="changePasswordForm">
+          <h2>Change Password</h2>
+
+          <label for="current-password">Current Password:</label>
+          <input type="password" id="current-password" maxlength="16" name="current-password" required>
+
+          <br><br>
+
+          <label for="new-password">New Password:</label>
+          <input type="password" id="new-password" maxlength="16" name="new-password" required>
+
+          <br><br>
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" maxlength="16" name="confirm-password" required>
+
+          <br><br>
+
+          <input type="submit" value="Submit">
+        </form>
+      </td>
+      <td>
+        <form id="deleteAccountForm">
+          <h2>Delete Account</h2>
+
+          <label for="confirm-delete">To confirm deletion, type "DELETE":</label>
+
+          <input type="text" id="confirm-delete" name="confirm-delete" required>
+
+          <br><br>
+
+          <input type="submit" value="Delete">
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <script src="settings.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>

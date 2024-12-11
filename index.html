@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Time Management</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="login-section" class="section-container">
+    <div id="help-container" style="display: block;">
+      <a href="images/user guide.pdf" target="_blank" style="text-decoration: none; color: black;">
+        <div class="help-content">
+          <img id="helpImg" src="images/help.png">
+          <p id="helpText">Help</p>
+        </div>
+      </a>
+    </div>
+    <div id="login-form" class="form-container">
+      <h1>LOGIN</h1>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" maxlength="16" placeholder="Username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" maxlength="16" placeholder="Password" required>
+
+        <br />
+    
+        <input type="checkbox" id="remember-me" style="margin-bottom: 10px;"> Remember me
+    
+        <input type="submit" value="Login" id="login_btn" style="width: 100%;">
+    
+        <p id="switchBtn" onclick="switchForm()">Register</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="register-form" class="form-container" style="display: none;">
+    <h1>REGISTER</h1>
+    <form>
+      <label for="registerUsername" >Username</label>
+      <input type="text" id="registerUsername" maxlength="16" placeholder="Username" required>
+
+      <br />
+      
+      <label for="registerPassword">Password</label>
+      <br />
+      <input type="password" id="registerPassword" maxlength="16" placeholder="Password" required>
+
+      <br />
+
+      <label for="confirmPassword">Confirm Password</label>
+      <br />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+      <input type="submit" value="Register" id="register_btn">
+      <p id="switchBtn" onclick="switchForm()">Login</p>
+    </form>
+  </div>
+
+  <div id="time-management-section" class="section-container" style="display: none;">
+
+    <div id="top-header">
+      <div id="settings-container">
+        <img id="settingsImg" src="images/settings.png" alt="Settings" />
+        <div id="dropdown-menu">
+          <ul>
+            <li id="account-settings" onClick="openSettings()">Account Settings</li>
+            <li id="logout">Logout</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="help-container" style="display: block;">
+        <a href="images/user guide.pdf" target="_blank" style="text-decoration: none; color: black;">
+          <div class="help-content">
+            <img id="helpImg" src="images/help.png">
+            <p id="helpText">Help</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="app-container">
+
+      <div id ="time-form">
+      <form class="time-entry-form">
+        <input type="text" id="taskName" maxlength="32" placeholder="Enter a task">
+        <input type="date" min="2000-01-01" max="2099-12-31" id="taskDate">
+        <input type="number" id="taskDuration" maxlength="8" placeholder="Duration (in hours)">
+        <input type="submit" value="Add" onClick="addTask(); return false;">
+      </form>
+      </div>
+
+      <table class="time-entries-table" id="time-table">
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Duration (in hours)</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="time-entries-list">
+          <!-- Tasks added here -->
+        </tbody>
+      </table>
+      </div>
+
+      <div id="taskEditForm" style="display: none;">
+        <h2>Edit Task</h2>
+        <form id="editTaskForm" onsubmit="updateTask(event)">
+          <label for="editTaskName">Task Name</label>
+          <input type="text" maxlength="32" id="editTaskName" placeholder="Enter a task" required>
+          <label for="editTaskDuration">Duration (in hours)</label>
+          <input type="number" maxlength="8" id="editTaskDuration" placeholder="Duration (in hours)">
+          <label for="editTaskDate">Date</label>
+          <input type="date" id="editTaskDate">
+          <input type="submit" value="Update">
+          <button onclick="cancelEdit()">Cancel</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="settings drop menu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+
+</html>

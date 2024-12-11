@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #login-container {
+    text-align: center;
+  }
+  
+  #login-form {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #login-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #login-form input[type="text"],
+  #login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  #login-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #app-container {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .time-entry-form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .time-entry-form label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+  }
+  
+  .time-entry-form input[type="text"],
+  .time-entry-form input[type="number"],
+  .time-entry-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .time-entry-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .time-entries-table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+  }
+  
+  .time-entries-table th,
+  .time-entries-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .time-entries-table th {
+    background-color: #ddd;
+  }
+  
+  .time-entries-table th:first-child,
+  .time-entries-table td:first-child {
+    width: 30%;
+  }
+  
+  .time-entries-table th:nth-child(2),
+  .time-entries-table td:nth-child(2) {
+    width: 25%;
+  }
+  
+  .time-entries-table th:nth-child(3),
+  .time-entries-table td:nth-child(3) {
+    width: 25%;
+  }
+  
+  .time-entries-table th:last-child,
+  .time-entries-table td:last-child {
+    width: 20%;
+  }
+
+  .register {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .register label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+  }
+  
+  .register input[type="text"],
+  .register input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .register input[type="submit"] {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .form-container {
+    width: 400px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    
+  }
+  
+  .form-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .form-container label {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="password"] {
+    width: 80%;
+    max-width: 300px; 
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .form-container input[type="submit"] {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #switchBtn {
+    color: #000000; 
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  #top-header {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px;
+    position: relative;
+  }
+  
+  #username-container {
+    margin-right: 10px;
+  }
+  
+  #usernameLabel {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  #settings-container {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #settingsImg {
+    width: 30px;
+    height: 30px;
+  }
+
+  #dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    min-width: 150px;
+  }
+  
+  #dropdown-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #dropdown-menu li {
+    cursor: pointer;
+    padding: 8px 12px;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  #dropdown-menu li:hover {
+    background-color: #f0f0f0;
+  }
+
+  #usernameLabel {
+    cursor: pointer;
+  }
+
+  #taskEditForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #taskEditForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #taskEditForm form {
+    width: 100%;
+  }
+  
+  #taskEditForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #taskEditForm input[type="text"],
+  #taskEditForm input[type="number"],
+  #taskEditForm input[type="date"],
+  #taskEditForm input[type="submit"],
+  #taskEditForm button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  #taskEditForm input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #taskEditForm input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  #taskEditForm button {
+    background-color: #bbb;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #taskEditForm button:hover {
+    background-color: #999;
+  }
+
+  .actionButton {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #helpImg {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+  }
+
+  #help-container {
+    position: absolute;
+    top: 0;
+    left: 96.5%;
+  }
+
+  #helpText {
+    position: relative;
+    top: -12px;
+    left: -4px;
+  }
+
+  .hide {
+    display: none;
+  }
+  
+  .invisible {
+    visibility: hidden;
+  }
